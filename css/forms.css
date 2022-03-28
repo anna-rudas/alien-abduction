@@ -1,0 +1,104 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-image: url(../img/galaxy.jpg);
+}
+.wrapper {
+	width: 80%;
+	margin: 0 auto;
+	padding: 1em;
+	display: flex;
+	flex-flow: row nowrap;
+	background-color: #efb106;
+}
+
+/* square brackets are attribute selectors --> i want to select a particular label, the one where for="abtype"*/
+p, [for="abtype"] {
+	margin-bottom: 0;
+	margin-top: 2rem;
+}
+section {
+	flex-basis: 57%;
+	margin-right: 10%;
+}
+aside {
+	flex-basis: 33%;
+}
+
+fieldset {
+	border: 1px solid black;
+	border-radius: 10px;
+	margin-bottom: 2rem;
+}
+
+/* legend is an inline element --> if you put a border around it, it is only as big as the content*/
+legend {
+	font-weight: bold;
+	font-size: 1.3rem;
+	margin-top: 1.5rem;
+	margin-bottom: 1rem;
+
+} 
+
+/* if i make this a block element --> it will be in a column instead of a row --> because it will as wide as its container, which is the fieldset */
+label {
+	display: block;
+}
+
+textarea {
+	height: 10rem;
+	padding: 1rem;
+}
+
+select {
+	font-size: 1rem;
+}
+
+button {
+	font-size: 1rem;
+	margin: 2rem 0; /*2rem on top and bottom, 0 on the sides*/
+	background-color: #bb342f;
+	color: white;
+	border: none;
+	padding: 0.5rem 1rem;
+	border-radius: 10px;
+}
+
+button:hover {
+	background-color: white;
+	color: #bb342f;
+}
+
+/*minden input elemre ezt a formazast szeretnem, kiveve radio buttons and the checkbox at the end, also i would like to apply the formatting to the textarea */
+input:not([type="radio"]):not([type="checkbox"]), textarea, select {
+	display: block;
+	margin-bottom: 2rem;
+	width: 20rem;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1rem;
+	padding: 0 1rem;
+	border-radius: 10px;
+	border: none;
+}
+
+h1, h3 {
+	font-family: 'Permanent Marker', Arial, cursive;
+	/* you can put extra fonts in case google is down and your chosen font is not available */
+}
+
+
+
+
+
+
+
+
+
+
